@@ -83,6 +83,7 @@
     <Compile Include="Archives\ZipArchive\IUnzippingZipFile.cs" />
     <Compile Include="Archives\ZipArchive\UnzippingZipFile.cs" />
     <Compile Include="Builder.cs" />
+    <Compile Include="DataTableFromXmlEntity\DataTableFromXmlEntity.cs" />
     <Compile Include="DirectoryPaths.cs" />
     <Compile Include="Entities\EntitiesFromFiFile\AdditionalAddressInfo\AdditionalAddressesInfo.cs" />
     <Compile Include="Entities\EntitiesFromFiFile\AdditionalAddressInfo\AdditionalAddressInfo.cs" />
@@ -105,6 +106,8 @@
     <Compile Include="Entities\EntitiesFromXmlFile\ActualStatus\ActualStatus.cs" />
     <Compile Include="Entities\EntitiesFromXmlFile\ActualStatus\ActualStatuses.cs" />
     <Compile Include="Entities\EntitiesFromXmlFile\AddressObject.cs" />
+    <Compile Include="Entities\EntitiesFromXmlFile\AddressObjectType\AddressObjectType.cs" />
+    <Compile Include="Entities\EntitiesFromXmlFile\AddressObjectType\AddressObjectTypes.cs" />
     <Compile Include="Entities\EntitiesFromXmlFile\CenterStatus\CenterStatus.cs" />
     <Compile Include="Entities\EntitiesFromXmlFile\CenterStatus\CenterStatuses.cs" />
     <Compile Include="Entities\EntitiesFromXmlFile\CurrentStatus\CurrentStatus.cs" />
@@ -123,6 +126,12 @@
     <Compile Include="Entities\EntitiesFromXmlFile\NormativeDocumentType\NormativeDocumentTypes.cs" />
     <Compile Include="Entities\EntitiesFromXmlFile\OperationStatus\OperationStatus.cs" />
     <Compile Include="Entities\EntitiesFromXmlFile\OperationStatus\OperationStatuses.cs" />
+    <Compile Include="Entities\EntitiesFromXmlFile\Room.cs" />
+    <Compile Include="Entities\EntitiesFromXmlFile\RoomType\RoomType.cs" />
+    <Compile Include="Entities\EntitiesFromXmlFile\RoomType\RoomTypes.cs" />
+    <Compile Include="Entities\EntitiesFromXmlFile\Stead.cs" />
+    <Compile Include="Entities\EntitiesFromXmlFile\StructureStatus\StructureStatus.cs" />
+    <Compile Include="Entities\EntitiesFromXmlFile\StructureStatus\StructureStatuses.cs" />
     <Compile Include="ExtractDownloadFiles\ExtractDownloadFiles.cs" />
     <Compile Include="ExtractDownloadFiles\IExtractDownloadFiles.cs" />
     <Compile Include="ExtractedFiles\ExtractedFiles.cs" />
@@ -184,6 +193,12 @@
     <Compile Include="ReadEntityFromFile\ReaderEntityFromFiFile\RedSteadEntity\ReaderSteadEntity.cs" />
     <Compile Include="ReadEntityFromFile\ReaderEntityFromFile.cs" />
     <Compile Include="ReadEntityFromFile\ReaderEntityFromXmlFile\IReaderEntityFromXmlFile.cs" />
+    <Compile Include="ReadEntityFromFile\ReaderEntityFromXmlFile\ReadActualStatusXmlEntity\IReaderActualStatusXmlEntity.cs" />
+    <Compile Include="ReadEntityFromFile\ReaderEntityFromXmlFile\ReadActualStatusXmlEntity\ReaderActualStatusXmlEntity.cs" />
+    <Compile Include="ReadEntityFromFile\ReaderEntityFromXmlFile\ReadAddressObjectXmlEntity\IReaderAddressObjectXmlEntity.cs" />
+    <Compile Include="ReadEntityFromFile\ReaderEntityFromXmlFile\ReadAddressObjectXmlEntity\ReaderAddressObjectXmlEntity.cs" />
+    <Compile Include="ReadEntityFromFile\ReaderEntityFromXmlFile\ReadCenterStatusXmlEntity\IReaderCenterStatusXmlEntity.cs" />
+    <Compile Include="ReadEntityFromFile\ReaderEntityFromXmlFile\ReadCenterStatusXmlEntity\ReaderCenterStatusXmlEntity.cs" />
     <Compile Include="ReadEntityFromFile\ReaderEntityFromXmlFile\ReaderEntityFromXmlFile.cs" />
     <Compile Include="WebRequests\DownloadFile\DownloadFile.cs" />
     <Compile Include="WebRequests\DownloadFile\IDownloadFile.cs" />
@@ -220,8 +235,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="EntityDataTable\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

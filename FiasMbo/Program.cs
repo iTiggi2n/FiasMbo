@@ -20,13 +20,16 @@ namespace FIAS
 
             //Builder.Buid().Resolve<IExtractDownloadFiles>().ExtractFiles();
 
-            var filePaths = Builder.Buid().Resolve<IExtractedFiles>().SelectExtractedFiles();
+            var path = @"C:\FiasMbo\FiasMbo\bin\Debug\Files\fias_delta_xml.rar\AS_CENTERST_20190812_ff3eed87-41a8-4211-9ac2-58140eff575a.XML";
 
-            Queue<string> queue = new Queue<string>(filePaths);
+            //var filePaths = Builder.Buid().Resolve<IExtractedFiles>().SelectExtractedFiles();
+
+            //Queue<string> queue = new Queue<string>(filePaths);
 
 
-            Parallel.ForEach(filePaths,
-             path => Builder.Buid().Resolve<IReaderEntityFromFile>().ReadEntityFromFile(path));
+            //Parallel.ForEach(filePaths,
+            // path => 
+            Builder.Buid().Resolve<IReaderEntityFromFile>().ReadEntityFromFile(path);
 
 
             //string dasd = @"C:\FiasMbo\FiasMbo\bin\Debug\Files\Республика Саха Якутия.zip\ADDRSTATUS.FI";

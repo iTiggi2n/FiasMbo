@@ -7,7 +7,7 @@ namespace FIAS.Entities.EntitiesFromXmlFile.ActualStatus
     [Serializable]
     [XmlRoot(Namespace = "", ElementName = "ActualStatuses", IsNullable = true)]
 
-    public class CenterStatuses
+    public class ActualStatuses
     {
         [XmlElement("ActualStatus")]
         public List<ActualStatus> ActualStatusList { get; set; } = new List<ActualStatus>();

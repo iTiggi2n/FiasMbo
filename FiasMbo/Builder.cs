@@ -17,6 +17,9 @@ using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadLinkEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadRegulatoryDocEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.RedSteadEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromXmlFile;
+using FIAS.ReadEntityFromFile.ReaderEntityFromXmlFile.ReadActualStatusXmlEntity;
+using FIAS.ReadEntityFromFile.ReaderEntityFromXmlFile.ReadAddressObjectXmlEntity;
+using FIAS.ReadEntityFromFile.ReaderEntityFromXmlFile.ReadCenterStatusXmlEntity;
 using FIAS.WebRequests.DownloadFile;
 using FIAS.WebRequests.Fias;
 using FIAS.WebRequests.Its;
@@ -60,7 +63,10 @@ namespace FIAS
             builder.RegisterType<ReaderAddressStatusEnity>().As<IReaderAddressStatusEnity>();
 
             builder.RegisterType<ReaderArchiveObjectEntity>().As<IReaderArchiveObjectEntity>();
+            builder.RegisterType<ReaderActualStatusXmlEntity>().As<IReaderActualStatusXmlEntity>();
+            builder.RegisterType<ReaderAddressObjectXmlEntity>().As<IReaderAddressObjectXmlEntity>();
 
+            builder.RegisterType<ReaderCenterStatusXmlEntity>().As<IReaderCenterStatusXmlEntity>();
 
             return builder.Build();
         }
