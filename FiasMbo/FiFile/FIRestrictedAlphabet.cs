@@ -1,7 +1,7 @@
 using System.IO;
 using System.Text;
 
-namespace FiasOffSite.FI
+namespace FIAS.FI
 {
     /// <summary>
     /// Implementation of Fast Infoset Restricted Alphabet [X.891 Section 8.2].

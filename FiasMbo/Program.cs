@@ -3,8 +3,9 @@ using FIAS.ExtractDownloadFiles;
 using FIAS.ExtractedFiles;
 using FIAS.Model.DownloadRegions;
 using FIAS.ReadEntityFromFile;
-using FiasOffSite.FI;
+using FIAS.FI;
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
@@ -21,8 +22,11 @@ namespace FIAS
 
             var filePaths = Builder.Buid().Resolve<IExtractedFiles>().SelectExtractedFiles();
 
+            Queue<string> queue = new Queue<string>(filePaths);
+
+
             Parallel.ForEach(filePaths,
-                path => Builder.Buid().Resolve<IReaderEntityFromFile>().ReadEntityFromFile(path));
+             path => Builder.Buid().Resolve<IReaderEntityFromFile>().ReadEntityFromFile(path));
 
 
             //string dasd = @"C:\FiasMbo\FiasMbo\bin\Debug\Files\Республика Саха Якутия.zip\ADDRSTATUS.FI";

@@ -2,7 +2,7 @@ using System;
 using System.Globalization;
 using System.Text;
 
-namespace FiasOffSite.FI
+namespace FIAS.FI
 {
     internal class InternalEncodingAlgorithm : FIEncoding
     {

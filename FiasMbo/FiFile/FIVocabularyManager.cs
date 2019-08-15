@@ -1,7 +1,7 @@
 
 using System.Collections.Generic;
 
-namespace FiasOffSite.FI
+namespace FIAS.FI
 {
 	/// <summary>
 	/// Manages external vocabulary objects

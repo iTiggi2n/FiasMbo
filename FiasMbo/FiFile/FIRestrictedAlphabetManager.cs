@@ -1,6 +1,6 @@
 using System;
 
-namespace FiasOffSite.FI
+namespace FIAS.FI
 {
 	internal class FIRestrictedAlphabetManager
 	{

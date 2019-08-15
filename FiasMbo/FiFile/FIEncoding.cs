@@ -1,4 +1,4 @@
-namespace FiasOffSite.FI
+namespace FIAS.FI
 {
 	/// <summary>
 	/// Abstract base class of Fast Infoset encodings <see cref="FIRestrictedAlphabet"/> and <see cref="FIEncodingAlgorithm"/>.

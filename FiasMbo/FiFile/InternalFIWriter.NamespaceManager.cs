@@ -1,7 +1,7 @@
 using System;
 using System.Globalization;
 
-namespace FiasOffSite.FI
+namespace FIAS.FI
 {
     internal partial class InternalFIWriter
     {

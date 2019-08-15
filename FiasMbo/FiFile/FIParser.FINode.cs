@@ -1,7 +1,7 @@
 using System;
 using System.Xml;
 
-namespace FiasOffSite.FI
+namespace FIAS.FI
 {
     internal sealed partial class FIParser
     {

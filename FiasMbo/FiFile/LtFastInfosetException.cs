@@ -1,7 +1,7 @@
 
 using System;
 
-namespace FiasOffSite.FI
+namespace FIAS.FI
 {
 	/// <summary>
 	/// Returns detailed information about the last exception.

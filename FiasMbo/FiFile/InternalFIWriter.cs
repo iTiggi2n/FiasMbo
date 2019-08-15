@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.IO;
 
-namespace FiasOffSite.FI
+namespace FIAS.FI
 {
     internal partial class InternalFIWriter
 	{

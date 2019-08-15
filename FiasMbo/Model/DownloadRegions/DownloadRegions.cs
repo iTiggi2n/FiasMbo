@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Threading.Tasks;
 using Autofac;
 using FIAS.WebRequests.DownloadFile;
 using FIAS.WebRequests.Fias;
@@ -23,10 +24,8 @@ namespace FIAS.Model.DownloadRegions
                     //если часть регионов на обновлении, то скачиваем с сайта Its
                     var regions = modelContext.Regions.Where(o => o.IsUpdate == true).Select(o => o.RegionName).ToList<string>();
                     var uries = Builder.Buid().Resolve<IIts>().GetUriesFileIts1C(regions);
-                    foreach (var uri in uries)
-                    {
-                        Builder.Buid().Resolve<IDownloadFile>().Download(uri.Key, uri.Value + ".zip");
-                    }
+                    Parallel.ForEach(uries,
+                        uri => Builder.Buid().Resolve<IDownloadFile>().Download(uri.Key, uri.Value + ".zip"));
                 }
             }
         }

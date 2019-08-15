@@ -8,7 +8,7 @@ using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadHouseEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadLinkEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadRegulatoryDocEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.RedSteadEntity;
-using FiasOffSite.FI;
+using FIAS.FI;
 using System.Xml;
 
 namespace FIAS.ReadEntityFromFile.ReaderEntityFromFiFile

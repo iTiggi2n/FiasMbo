@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace FiasOffSite.FI
+namespace FIAS.FI
 {
 	internal class FIEncodingAlgorithmManager
 	{

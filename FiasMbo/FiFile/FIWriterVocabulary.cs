@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace FiasOffSite.FI
+namespace FIAS.FI
 {
 	internal partial class FIWriterVocabulary
 	{

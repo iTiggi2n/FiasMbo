@@ -13,8 +13,11 @@ namespace FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadAdditionalAddressIn
             Builder.Buid().Resolve<ILoger>().Log($@"Start reading {reader.LocalName}");
             XmlSerializer serializer = new XmlSerializer(typeof(AdditionalAddressesInfo));
             AdditionalAddressesInfo additionalAddressesInfo = (AdditionalAddressesInfo)serializer.Deserialize(reader);
-            var table = additionalAddressesInfo.CreateDataTable(additionalAddressesInfo.AdditionalAddressInfoList);
-            Builder.Buid().Resolve<ILoger>().Log($@"Fin read {reader.LocalName}");
+            if (additionalAddressesInfo != null)
+            {
+                var table = additionalAddressesInfo.CreateDataTable(additionalAddressesInfo.AdditionalAddressInfoList);
+                Builder.Buid().Resolve<ILoger>().Log($@"Fin read {reader.LocalName}");
+            }
         }
     }
 }

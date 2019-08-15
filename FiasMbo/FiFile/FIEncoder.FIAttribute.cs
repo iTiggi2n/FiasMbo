@@ -1,4 +1,4 @@
-namespace FiasOffSite.FI
+namespace FIAS.FI
 {
     internal partial class FIEncoder
     {

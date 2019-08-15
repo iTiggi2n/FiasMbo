@@ -102,6 +102,15 @@
     <Compile Include="Entities\EntitiesFromFiFile\RegulatoryDoc\RegulatoryDocs.cs" />
     <Compile Include="Entities\EntitiesFromFiFile\Stead\Stead.cs" />
     <Compile Include="Entities\EntitiesFromFiFile\Stead\Steads.cs" />
+    <Compile Include="Entities\EntitiesFromXmlFile\ActualStatus\ActualStatus.cs" />
+    <Compile Include="Entities\EntitiesFromXmlFile\ActualStatus\ActualStatuses.cs" />
+    <Compile Include="Entities\EntitiesFromXmlFile\AddressObject.cs" />
+    <Compile Include="Entities\EntitiesFromXmlFile\CenterStatus\CenterStatus.cs" />
+    <Compile Include="Entities\EntitiesFromXmlFile\CenterStatus\CenterStatuses.cs" />
+    <Compile Include="Entities\EntitiesFromXmlFile\CurrentStatus\CurrentStatus.cs" />
+    <Compile Include="Entities\EntitiesFromXmlFile\CurrentStatus\CurrentStatuses.cs" />
+    <Compile Include="Entities\EntitiesFromXmlFile\House.cs" />
+    <Compile Include="Entities\EntitiesFromXmlFile\NormativeDocument.cs" />
     <Compile Include="ExtractDownloadFiles\ExtractDownloadFiles.cs" />
     <Compile Include="ExtractDownloadFiles\IExtractDownloadFiles.cs" />
     <Compile Include="ExtractedFiles\ExtractedFiles.cs" />
@@ -200,7 +209,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Entities\EntitiesFromXmlFile\" />
     <Folder Include="EntityDataTable\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

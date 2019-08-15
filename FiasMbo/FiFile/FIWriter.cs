@@ -3,7 +3,7 @@ using System;
 using System.IO;
 using System.Xml;
 
-namespace FiasOffSite.FI
+namespace FIAS.FI
 {
     /// <summary>
     /// Represents a writer that provides a fast, non-cached, forward-only way of generating streams or files containing XML binary encoded data that conforms to the ITU-T: Fast infoset X.891 (05/2005) recommendation.

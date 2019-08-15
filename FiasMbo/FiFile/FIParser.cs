@@ -4,7 +4,7 @@ using System.IO;
 using System.Text;
 using System.Xml;
 
-namespace FiasOffSite.FI
+namespace FIAS.FI
 {
 	/// <summary>
 	/// Summary description for FastInfosetReader.

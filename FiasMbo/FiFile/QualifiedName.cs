@@ -1,5 +1,5 @@
 
-namespace FiasOffSite.FI
+namespace FIAS.FI
 {
     internal struct QualifiedName
     {

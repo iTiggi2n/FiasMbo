@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 
-namespace FiasOffSite.FI
+namespace FIAS.FI
 {
     // NOTE: Encoder does not validate order of method calls,
     // it is therefore up to the calling class to ensure valid state at all times

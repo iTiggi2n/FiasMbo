@@ -1,6 +1,6 @@
 using System;
 
-namespace FiasOffSite.FI
+namespace FIAS.FI
 {
 	/// <summary>
 	/// Implementation of a set of Fast Infoset vocabulary tables.

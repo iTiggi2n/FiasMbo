@@ -18,6 +18,10 @@ namespace FIAS.Entities.EntitiesFromFiFile
 
         public DataTable CreateDataTable<T>(List<T> listeEtities) where T : class
         {
+            if (listeEtities.Count == 0)
+            {
+                return null;
+            }
             DataTable dataTable = new DataTable();
             foreach (PropertyInfo info in new HeaderEntityFromFiFile().GetType().GetProperties())
             {

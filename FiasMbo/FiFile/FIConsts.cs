@@ -1,7 +1,7 @@
 
 using System.Text;
 
-namespace FiasOffSite.FI
+namespace FIAS.FI
 {
 	/// <summary>
 	/// Summary description for FastInfosetConsts.

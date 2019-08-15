@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Xml;
 
-namespace FiasOffSite.FI
+namespace FIAS.FI
 {
 	/// <summary>
 	/// Represents a reader that provides fast, non-cached, forward-only access to XML binary encoded data that conforms to the ITU-T: Fast infoset X.891 (05/2005) recommendation.

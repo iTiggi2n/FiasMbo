@@ -1,6 +1,6 @@
 using System;
 
-namespace FiasOffSite.FI
+namespace FIAS.FI
 {
     /// <summary>
     /// Base class for implementing custom Encoding Algorithms [X.891 Section 8.3].
