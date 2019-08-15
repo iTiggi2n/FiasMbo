@@ -90,6 +90,8 @@
     <Compile Include="Entities\EntitiesFromFiFile\AddressObject\AddressObjects.cs" />
     <Compile Include="Entities\EntitiesFromFiFile\AddressStatus\AddressStatus.cs" />
     <Compile Include="Entities\EntitiesFromFiFile\AddressStatus\AddressStatuses.cs" />
+    <Compile Include="Entities\EntitiesFromFiFile\ArchiveObject\ArchiveObject.cs" />
+    <Compile Include="Entities\EntitiesFromFiFile\ArchiveObject\ArchiveObjects.cs" />
     <Compile Include="Entities\EntitiesFromFiFile\HeaderEntityFromFiFile.cs" />
     <Compile Include="Entities\EntitiesFromFiFile\House\House.cs" />
     <Compile Include="Entities\EntitiesFromFiFile\House\Houses.cs" />
@@ -148,6 +150,8 @@
     <Compile Include="ReadEntityFromFile\ReaderEntityFromFiFile\ReadAddressObjectEntity\ReaderAddressObjectEntity.cs" />
     <Compile Include="ReadEntityFromFile\ReaderEntityFromFiFile\ReadAddressStatusEntity\IReaderAddressStatusEnity.cs" />
     <Compile Include="ReadEntityFromFile\ReaderEntityFromFiFile\ReadAddressStatusEntity\ReaderAddressStatusEnity.cs" />
+    <Compile Include="ReadEntityFromFile\ReaderEntityFromFiFile\ReadArchiveObjectEntity\IReaderArchiveObjectEntity.cs" />
+    <Compile Include="ReadEntityFromFile\ReaderEntityFromFiFile\ReadArchiveObjectEntity\ReaderArchiveObjectEntity.cs" />
     <Compile Include="ReadEntityFromFile\ReaderEntityFromFiFile\ReaderEntityFromFiFile.cs" />
     <Compile Include="ReadEntityFromFile\ReaderEntityFromFiFile\ReadHouseEntity\IReaderHouseEntity.cs" />
     <Compile Include="ReadEntityFromFile\ReaderEntityFromFiFile\ReadHouseEntity\ReaderHouseEntity.cs" />

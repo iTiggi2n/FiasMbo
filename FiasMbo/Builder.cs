@@ -11,6 +11,7 @@ using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadAdditionalAddressInfoEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadAddressObjectEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadAddressStatusEntity;
+using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadArchiveObjectEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadHouseEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadLinkEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadRegulatoryDocEntity;
@@ -57,6 +58,9 @@ namespace FIAS
             builder.RegisterType<ReaderLinkEntity>().As<IReaderLinkEntity>();
             builder.RegisterType<ReaderSteadEntity>().As<IReaderSteadEntity>();
             builder.RegisterType<ReaderAddressStatusEnity>().As<IReaderAddressStatusEnity>();
+
+            builder.RegisterType<ReaderArchiveObjectEntity>().As<IReaderArchiveObjectEntity>();
+
 
             return builder.Build();
         }

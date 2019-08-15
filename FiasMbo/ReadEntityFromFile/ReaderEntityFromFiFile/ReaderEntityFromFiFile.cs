@@ -1,20 +1,15 @@
-﻿using FIAS.Entities.EntitiesFromFiFile.AddressObject;
+﻿using Autofac;
+using FIAS.Log;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadAdditionalAddressInfoEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadAddressObjectEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadAddressStatusEntity;
+using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadArchiveObjectEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadHouseEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadLinkEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadRegulatoryDocEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.RedSteadEntity;
 using FiasOffSite.FI;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
-using System.Xml.Serialization;
 
 namespace FIAS.ReadEntityFromFile.ReaderEntityFromFiFile
 {
@@ -27,13 +22,15 @@ namespace FIAS.ReadEntityFromFile.ReaderEntityFromFiFile
         private IReaderLinkEntity _readerLinkEntity;
         private IReaderSteadEntity _readerSteadEntity;
         private IReaderAddressStatusEnity _readerAddressStatusEnity;
+        private IReaderArchiveObjectEntity _readerArchiveObjectEntity;
         public ReaderEntityFromFiFile(IReaderAddressObjectEntity readerAddressObjectEntity,
             IReaderAdditionalAddressInfoEntity readerAdditionalAddressInfoEntity,
             IReaderRegulatoryDocEntity readerRegulatoryDocEntity,
             IReaderHouseEntity readerHouseEntity,
             IReaderLinkEntity readerLinkEntity,
             IReaderSteadEntity readerSteadEntity,
-            IReaderAddressStatusEnity readerAddressStatusEnity)
+            IReaderAddressStatusEnity readerAddressStatusEnity,
+            IReaderArchiveObjectEntity readerArchiveObjectEntity)
         {
             _readerAddressObjectEntity = readerAddressObjectEntity;
             _readerAdditionalAddressInfoEntity = readerAdditionalAddressInfoEntity;
@@ -42,6 +39,7 @@ namespace FIAS.ReadEntityFromFile.ReaderEntityFromFiFile
             _readerLinkEntity = readerLinkEntity;
             _readerSteadEntity = readerSteadEntity;
             _readerAddressStatusEnity = readerAddressStatusEnity;
+            _readerArchiveObjectEntity = readerArchiveObjectEntity;
         }
         public void ReadEntityFromFiFile(string path)
         {
@@ -84,7 +82,16 @@ namespace FIAS.ReadEntityFromFile.ReaderEntityFromFiFile
                         _readerAddressStatusEnity.ReadAddressStatusEnity(reader);
                         break;
                     }
-                default:throw new Exception($"Error {reader.LocalName} not found");
+                case "ArchiveObjects":
+                    {
+                        _readerArchiveObjectEntity.ReadArchiveObject(reader);
+                        break;
+                    }
+                default:
+                    {
+                        Builder.Buid().Resolve<ILoger>().Log($@"Сущность {reader.LocalName} не найдена");
+                        break;
+                    }
             }
         }
     }

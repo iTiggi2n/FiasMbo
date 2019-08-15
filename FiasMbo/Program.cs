@@ -19,14 +19,14 @@ namespace FIAS
 
             //Builder.Buid().Resolve<IExtractDownloadFiles>().ExtractFiles();
 
-            //var filePaths = Builder.Buid().Resolve<IExtractedFiles>().SelectExtractedFiles();
+            var filePaths = Builder.Buid().Resolve<IExtractedFiles>().SelectExtractedFiles();
 
-            //Parallel.ForEach(filePaths,
-            //    path => Builder.Buid().Resolve<IReaderEntityFromFile>().ReadEntityFromFile(path));
+            Parallel.ForEach(filePaths,
+                path => Builder.Buid().Resolve<IReaderEntityFromFile>().ReadEntityFromFile(path));
 
 
-            string dasd = @"C:\FiasMbo\FiasMbo\bin\Debug\Files\Республика Саха Якутия.zip\ADDRSTATUS.FI";
-            Builder.Buid().Resolve<IReaderEntityFromFile>().ReadEntityFromFile(dasd);
+            //string dasd = @"C:\FiasMbo\FiasMbo\bin\Debug\Files\Республика Саха Якутия.zip\ADDRSTATUS.FI";
+            //Builder.Buid().Resolve<IReaderEntityFromFile>().ReadEntityFromFile(dasd);
 
             //XmlReader fiReader1 = XmlReader.Create(new FIReader(filePaths[filePaths.Count - 1]), null);
             //{
