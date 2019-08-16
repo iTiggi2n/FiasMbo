@@ -1,11 +1,7 @@
 ﻿using FIAS.Archives.RarArchive;
 using FIAS.Archives.ZipArchive;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FIAS.Archives
 {

@@ -4,7 +4,6 @@ using FIAS.Archives.RarArchive;
 using FIAS.Archives.ZipArchive;
 using FIAS.ExtractDownloadFiles;
 using FIAS.ExtractedFiles;
-using FIAS.Log;
 using FIAS.Model.DownloadRegions;
 using FIAS.ReadEntityFromFile;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile;
@@ -18,8 +17,22 @@ using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadRegulatoryDocEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.RedSteadEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromXmlFile;
 using FIAS.ReadEntityFromFile.ReaderEntityFromXmlFile.ReadActualStatusXmlEntity;
+using FIAS.ReadEntityFromFile.ReaderEntityFromXmlFile.ReadAddressObjectTypeXmlEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromXmlFile.ReadAddressObjectXmlEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromXmlFile.ReadCenterStatusXmlEntity;
+using FIAS.ReadEntityFromFile.ReaderEntityFromXmlFile.ReadCurrentStatusXmlEntity;
+using FIAS.ReadEntityFromFile.ReaderEntityFromXmlFile.ReadEstateStatusXmlEntity;
+using FIAS.ReadEntityFromFile.ReaderEntityFromXmlFile.ReadFlatTypeXmlEntity;
+using FIAS.ReadEntityFromFile.ReaderEntityFromXmlFile.ReadHouseStateStatusXmlEntity;
+using FIAS.ReadEntityFromFile.ReaderEntityFromXmlFile.ReadHouseXmlEntity;
+using FIAS.ReadEntityFromFile.ReaderEntityFromXmlFile.ReadIntervalStatusXmlEntity;
+using FIAS.ReadEntityFromFile.ReaderEntityFromXmlFile.ReadNormativeDocumentTypeXmlEntity;
+using FIAS.ReadEntityFromFile.ReaderEntityFromXmlFile.ReadNormativeDocumentXmlEntity;
+using FIAS.ReadEntityFromFile.ReaderEntityFromXmlFile.ReadOperationStatusXmlEntity;
+using FIAS.ReadEntityFromFile.ReaderEntityFromXmlFile.ReadRoomTypeXmlEntity;
+using FIAS.ReadEntityFromFile.ReaderEntityFromXmlFile.ReadRoomXmlEntity;
+using FIAS.ReadEntityFromFile.ReaderEntityFromXmlFile.ReadSteadXmlEntity;
+using FIAS.ReadEntityFromFile.ReaderEntityFromXmlFile.ReadStructureStatusXmlEntity;
 using FIAS.WebRequests.DownloadFile;
 using FIAS.WebRequests.Fias;
 using FIAS.WebRequests.Its;
@@ -35,7 +48,6 @@ namespace FIAS
             var builder = new ContainerBuilder();
 
             builder.RegisterType<DownloadFile>().As<IDownloadFile>();
-            builder.RegisterType<Loger>().As<ILoger>();
             builder.RegisterType<WebPage>().As<IWebPage>();
 
             builder.RegisterType<Its>().As<IIts>();
@@ -67,6 +79,24 @@ namespace FIAS
             builder.RegisterType<ReaderAddressObjectXmlEntity>().As<IReaderAddressObjectXmlEntity>();
 
             builder.RegisterType<ReaderCenterStatusXmlEntity>().As<IReaderCenterStatusXmlEntity>();
+            builder.RegisterType<ReaderCurrentStatusXmlEntity>().As<IReaderCurrentStatusXmlEntity>();
+            builder.RegisterType<ReaderHouseXmlEntity>().As<IReaderHouseXmlEntity>();
+
+            builder.RegisterType<ReaderRoomXmlEntity>().As<IReaderRoomXmlEntity>();
+            builder.RegisterType<ReaderEstateStatusXmlEntity>().As<IReaderEstateStatusXmlEntity>();
+            builder.RegisterType<ReaderFlatTypeXmlEntity>().As<IReaderFlatTypeXmlEntity>();
+
+            builder.RegisterType<ReaderHouseStateStatusXmlEntity>().As<IReaderHouseStateStatusXmlEntity>();
+            builder.RegisterType<ReaderIntervalStatusXmlEntity>().As<IReaderIntervalStatusXmlEntity>();
+            builder.RegisterType<ReaderNormativeDocumentTypeXmlEntity>().As<IReaderNormativeDocumentTypeXmlEntity>();
+
+            builder.RegisterType<ReaderNormativeDocumentXmlEntity>().As<IReaderNormativeDocumentXmlEntity>();
+            builder.RegisterType<ReaderOperationStatusXmlEntity>().As<IReaderOperationStatusXmlEntity>();
+            builder.RegisterType<ReaderRoomTypeXmlEntity>().As<IReaderRoomTypeXmlEntity>();
+
+            builder.RegisterType<ReaderSteadXmlEntity>().As<IReaderSteadXmlEntity>();
+            builder.RegisterType<ReaderStructureStatusXmlEntity>().As<IReaderStructureStatusXmlEntity>();
+            builder.RegisterType<ReaderAddressObjectTypeXmlEntity>().As<IReaderAddressObjectTypeXmlEntity>();
 
             return builder.Build();
         }

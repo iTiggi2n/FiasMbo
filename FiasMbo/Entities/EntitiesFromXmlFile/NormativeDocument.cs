@@ -5,7 +5,7 @@ namespace FIAS.Entities.EntitiesFromXmlFile
 {
     [Serializable]
     [XmlRoot(Namespace = "", ElementName = "NormativeDocument", IsNullable = true)]
-    class NormativeDocument
+    public class NormativeDocument
     {
         #region proporties
         [XmlAttribute("NORMDOCID")]

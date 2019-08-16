@@ -1,6 +1,4 @@
-﻿using Autofac;
-using FIAS.Log;
-using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadAdditionalAddressInfoEntity;
+﻿using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadAdditionalAddressInfoEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadAddressObjectEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadAddressStatusEntity;
 using FIAS.ReadEntityFromFile.ReaderEntityFromFiFile.ReadArchiveObjectEntity;
@@ -89,8 +87,7 @@ namespace FIAS.ReadEntityFromFile.ReaderEntityFromFiFile
                     }
                 default:
                     {
-                        Builder.Buid().Resolve<ILoger>().Log($@"Сущность {reader.LocalName} не найдена");
-                        break;
+                        throw new System.Exception($"Entity {reader.LocalName} not found");
                     }
             }
         }
